@@ -1,0 +1,70 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Intermediate R
+
+```{r}
+3 == (2 + 1)
+"intermediate" != "r"
+TRUE != FALSE
+"Rchitect" != "rchitect"
+
+
+```
+[1] "RCHITECT"
+
+gREATER AND LESS THAN
+
+```{r}
+-6*5+2 >= -10 + 1
+"raining"<="table"
+
+
+``
+"raining"<="table" devuelve TRUE porque toma el cuenta el orden alfabetico, raining está antes de table,
+`
+```
+```{r}
+linkedin <- c(16,9,13,5,2,17,14)
+facebook <- c(17,7,5,16,8,13,14)
+
+linkedin > 15
+facebook <= 10
+
+linkedin > facebook
+
+views <- matrix(c(linkedin,facebook), nrow = 2, byrow=TRUE)
+views
+```
+Operators logical
+
+```{r}
+linkedin <= 10 & facebook == 13
+views > 11 & views <= 14
+```
+The if statement
+```{r}
+medium <- "Facebook"
+num_views <- 14
+
+if (medium == "Linkedin") {
+  print("Showing LinkedIn information")
+  
+} else {
+  print("unknown medium")
+}
+
+
+if (num_views > 15) {
+  print("You are popular!")
+  
+}else {
+  print("try to be more visible")
+}
+
+
+```
+
+
