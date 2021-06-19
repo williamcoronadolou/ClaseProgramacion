@@ -66,5 +66,85 @@ if (num_views > 15) {
 
 
 ```
+Loops
+```{r}
+spped <- 64
 
+while (spped > 30){
+  print("Slow down!")
+  spped <- spped - 7
+  
+}
+
+spped
+
+```
+
+```{r}
+speed <- 64
+
+while (speed > 30){
+  print(paste("Your speed is: ", speed))
+  
+  if(speed >= 48){
+    print("Slow down big time!")
+    speed <- speed -11
+  }else{
+    print("Slow down!")
+    speed <- speed -6
+  }
+  
+}
+
+speed
+
+
+```
+
+
+```{r}
+linkedin <- c(16,9,13,5,2,17,14)
+for(l in linkedin){
+  print(l)
+}
+
+for(i in l:length(linkedin)) {
+  print(linkedin[i])
+}
+```
+
+loop over a list
+```{r}
+nyc <- list(pop=8405837, boroughs=c("Manhattan","Bronx","Brooklyn","Queens","Staten island"), capital=FALSE)
+
+for (n in nyc) {
+  print(n)
+  
+}
+
+for(i in 1:length(nyc)){
+  if (i==2){
+    for (j in 1:length(nyc[[i]])) {
+      print(nyc[[i]][j])
+    }
+    else{
+      print(nyc[[i]])
+      }
+  }
+}
+
+```
+```{r}
+
+views <- matrix(c(linkedin,facebook), nrow=2, byrow = TRUE)
+
+for(row in 1:nrow(views)){
+  for(col in 1:ncol(views)){
+    print(paste("on row", row, "and column", col, "contains", views[row][col]))
+  }
+}
+  
+
+
+```
 
