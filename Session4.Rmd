@@ -102,4 +102,48 @@ for (t in temp){
 
 
 ```
+Clase 26/junio/2021
+
+lapply and anonymous functions
+
+```{r}
+ 
+#Una función anonima no necesita de un nombrado para ser utilizada, 
+(function(x,y){3*x*y})(9,10)
+pioneers <- c("GAUSS:1777","BAYES:1702","PASCAL:1623","PEARSON:1857")
+split <- strsplit(pioneers, split = ":")
+  # strsplit : Function that splits the Elements of a Character Vector
+  
+split_low <- lapply(split, tolower)
+split_low
+split
+
+names <- lapply(split_low, function(x){x[1]})
+names
+
+years <- lapply(split_low,function(x) {x[2]})
+years
+```
+Use lapply with additional arguments
+
+```{r}
+#COnstruir funcion que lleve dos parametros
+
+#recibir dos parametros pensando que x puede ser un vector o una lista, lo que hace es devolver la posicion que se esta indicando
+select_el <- function(x, index){
+  x[index]
+}
+
+names <- lapply(split_low, select_el,1)
+names
+
+years <- lapply(split_low, select_el,2)
+years
+
+```
+
+
+
+
+
 
