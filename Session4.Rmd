@@ -142,8 +142,50 @@ years
 
 ```
 
+sapply
+
+```{r}
+temp <- list(c(3,7,9,6), c(6,9,12,13,5), c(4,8,3,-1,-3), c(1,4,7,2,-2), c(5,7,9,4,2), c(-3,5,8,9,4), c(3,6,9,4,1))
+
+extremes <- function() {
+c(min=min(x), max=max())
+}
+
+lapply(temp, extremes)
+sapply(temp, extremes)
+
+temp2 <- list(1,2,3,4,5)
+
+func_temp2 <- functon(){
+x
+}
+
+lapply(temp2, func_temp2)
+sapply(temp2, func_temp2)
 
 
+vapply
+```
 
+```{r}
+basics <- function(x) {
+c(min=min(x), mean=mean(x), max=max(x))
+}
 
+lapply(temp, basics)
+sapply(temp, basics)
+vapply(temp, basics, numeric(3))
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
+
+```{r}
+
+```
 
