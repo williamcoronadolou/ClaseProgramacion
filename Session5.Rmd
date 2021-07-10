@@ -8,6 +8,7 @@ Introduction to the Tidyverse
 ```{r}
 library(gapminder)
 library(dplyr)
+library(ggplot2)
 
 gapminder
 ```
@@ -22,11 +23,14 @@ gapminder %>%
 	#la libreria dplyr es la que permite utilizar "filter"
 	
 	#ordenar de forma ascendente la columna indicada
+gapminder %>%
 	arrange(lifeExp)
 	
 	#si se quiere ordenar de forma descendente: desc
-	arrange(desc(lifeExp))
-	
+gapminder %>%	
+arrange(desc(lifeExp))
+
+gapminder %>%
 	
 	arrange(desc(pop))
 	
@@ -103,8 +107,20 @@ ggplot(gapminder_1952, aes(x=pop, y=lifeExp, color=continent)) +
 
 
 ```{r}
-ggplot(gapminder_1952, aes(x=pop, y=lifeExp, color=continent)) +
+
+ggplot(gapminder_1952, aes(x=pop, y=lifeExp)) +
   geom_point() +
-  scale_x_log10()
+  scale_x_log10() +
+  facet_wrap(~year)
+
+```
+
+
+```{r}
+
+ggplot(gapminder, aes(x=pop, y=lifeExp)) +
+  geom_point() +
+  scale_x_log10() +
+  facet_wrap(~year)
 
 ```
